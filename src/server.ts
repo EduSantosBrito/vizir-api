@@ -1,16 +1,9 @@
 import express, { Request, Response } from 'express';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 import depthLimit from 'graphql-depth-limit';
 import compression from 'compression';
 import cors from 'cors';
-
-const typeDefs = gql`
-    type Query {
-        hello: String
-    }
-`;
-
-const resolvers = { Query: { hello: () => 'Hello world!' } };
+import { typeDefs, resolvers } from './GraphQL';
 
 const app = express();
 app.set('port', process.env.PORT || 3000);
