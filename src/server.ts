@@ -18,10 +18,10 @@ app.use(cors());
 app.use(compression());
 apolloServer.applyMiddleware({ app });
 
-app.use('*', (req: Request, res: Response) => {
-    res.status(404).send('404');
+app.get('/health', (_req: Request, res: Response) => {
+    res.status(200).send('Ok');
 });
 
-app.listen(app.get('port'), () => {
+export default app.listen(app.get('port'), () => {
     console.log(`Server listening on port ${app.get('port')}`);
 });
