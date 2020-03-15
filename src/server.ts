@@ -12,6 +12,8 @@ const apolloServer = new ApolloServer({
     typeDefs,
     resolvers,
     validationRules: [depthLimit(7)],
+    introspection: true,
+    playground: true,
 });
 
 app.use(cors());

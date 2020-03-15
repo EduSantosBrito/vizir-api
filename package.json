@@ -28,6 +28,7 @@
     "scripts": {
         "build:dev": "nodemon --watch 'dist/**/*'",
         "watch": "tsc --watch",
+        "dev": "yarn run watch & yarn run build:dev",
         "build": "tsc",
         "lint": "tsc && eslint '*/**/*.{js,ts}' --quiet --fix",
         "start": "node ./dist/server.js",
