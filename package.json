@@ -22,12 +22,6 @@
         "collectCoverageFrom": [
             "src/**/*.{js,jsx,ts,tsx}"
         ],
-        "coverageThreshold": {
-            "global": {
-                "lines": 90,
-                "statements": 90
-            }
-        },
         "globalSetup": "./global.setup.js",
         "globalTeardown": "./global.teardown.js"
     },
@@ -37,8 +31,7 @@
         "build": "tsc",
         "lint": "tsc && eslint '*/**/*.{js,ts}' --quiet --fix",
         "start": "node ./dist/server.js",
-        "test": "tsc && jest",
-        "test:coverage": "tsc && jest --coverage"
+        "test": "tsc && jest"
     },
     "dependencies": {
         "apollo-server-express": "^2.11.0",
