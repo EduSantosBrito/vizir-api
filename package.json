@@ -27,7 +27,9 @@
                 "lines": 90,
                 "statements": 90
             }
-        }
+        },
+        "globalSetup": "./global.setup.js",
+        "globalTeardown": "./global.teardown.js"
     },
     "scripts": {
         "build:dev": "nodemon --watch 'dist/**/*'",
