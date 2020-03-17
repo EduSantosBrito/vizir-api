@@ -8,7 +8,7 @@ RUN yarn add -D typescript
 
 RUN yarn build
 
-RUN yarn
+RUN yarn --network-timeout 1000000
 
 EXPOSE 3000
 
