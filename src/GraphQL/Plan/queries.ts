@@ -9,7 +9,7 @@ const plans = [
 export default {
     Query: {
         getPlans: () => plans,
-        getPlanById: (_id: number) => {
+        getPlanById: (_parent: any, { _id }: { _id: number }) => {
             const plan = plans.find(planToFilter => planToFilter._id === _id);
             if (!plan) {
                 throw new GraphQLError('Plano não encontrado, tente novamente.');
